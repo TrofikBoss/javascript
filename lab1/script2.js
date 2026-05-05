@@ -5,7 +5,7 @@ document.querySelector("#form_count").onsubmit = (ev) => {
     let num = parseInt(document.querySelector("#number").value);
     let str1 = "На ветке сидит " + num + " ворон";
     let last_number = num % 10;
-    let last_number2 = num % 100 - last_number;
+    let last_number2 = (num % 100 - last_number) / 10;
     if (num == 1) {
         str1 += "а";
     } else if (num >= 2 && num <= 4) {
