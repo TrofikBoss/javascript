@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пенсионный калькулятор</title>
+</head>
+<body>
+    <form id="age_form" method="GET">
+        <input type="number" placeholder="Возраст" name="age" required>
+        <span>
+            <input type="radio" name="gender" value="male" checked id="male">
+            <label for="male">Мужской</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">Женский</label>
+        </span>
+        <button>Расчитать</button>
+        <textarea name="result" id="result" disabled></textarea>
+    </form>
+    <script src="script1.js"></script>
+</body>
+</html>
