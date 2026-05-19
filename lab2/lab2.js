@@ -55,7 +55,7 @@ function factorial(n) {
  * @param {Number} n номер числа
  * @returns {BigInt} число Фибонначи на n месте
  */
-function fib(n) {
+export function fib(n) {
     if (n == 0) {
         return 0n;
     } else if (n == 1 && n == 2) {
