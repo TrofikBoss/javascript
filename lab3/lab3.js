@@ -67,6 +67,12 @@ export function arrReverseSorted(mass) {
     return mass2;
 }
 
-export function unique() {
-    
+export function unique(mass) {
+    let mass2 = [];
+    for (let i = 0; i < mass.length; i++) {
+        if (!mass2.includes(mass[i])) {
+            mass2.push(mass[i]);
+        }
+    }
+    return mass2;
 }
