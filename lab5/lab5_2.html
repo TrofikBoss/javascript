@@ -9,7 +9,20 @@
     <div id="container"></div>
     <script>
         function createTree(container, data) {
-            
+            let elem = document.createElement("ul");
+            for (x in data)  {
+                if (Object.keys(data[x]).length == 0) {
+                    let li = document.createElement("li");
+                    li.textContent = x;
+                    elem.appendChild(li);
+                } else {
+                    let li = document.createElement("li");
+                    li.textContent = x;
+                    createTree(li, data[x]);
+                    elem.appendChild(li);
+                }
+            }
+            container.appendChild(elem);
         }
 
         let data = {

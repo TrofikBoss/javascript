@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+    <head>
+	<meta charset="UTF-8">
+	<title>Text</title>
+</head>
+<body>
+	<input type="button" id="hider" value="Спрятать текст">
+
+	<div id="text">Текст</div>
+
+	<script>
+        let state = 1;
+        
+        document.querySelector("#hider").onclick = () => {
+            if (state == 1) {
+                state = 0;
+                document.querySelector("#hider").value = "Показать текст";
+                document.querySelector("#text").hidden = true;
+            } else {
+                state = 1;
+                document.querySelector("#hider").value = "Спрятать текст";
+                document.querySelector("#text").hidden = false;
+            }
+        }
+	</script>
+
+</body></html>
