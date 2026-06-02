@@ -36,22 +36,11 @@ class Book {
     static compare(A, B) {
         if (A.getPubYear > B.getPubYear) {
             return 1;
+        } else if (A.getPubYear < B.getPubYear) {
+            return -1; 
         } else {
-            return 0; 
+            return 0;
         }
-    }
-    static bookSort(mass) {
-        let x = 0;
-        for (let i = 0; i < mass.length; i++) {
-            for (let j = i + 1; j < mass.length; j++) {
-                if (Book.compare(mass[j], mass[i])) {
-                    x = mass[i];
-                    mass[i] = mass[j];
-                    mass[j] = x;
-                }
-            }
-        }
-        return mass;
     }
     static isEmpty(obj) {
         if (Object.getOwnPropertyNames(obj).length == 0 && Object.getOwnPropertySymbols(obj).length == 0) {
@@ -80,7 +69,7 @@ mass = [new Book("Дорогая книга", 2006, 1000),
     new Book("Интересная книга", 2025, 800),
     new Book("Дешёвая книга", 2007, 100),
     new Book("Очень дорогая книга", 1996, 5000)];
-console.log(Book.bookSort(mass));
+console.log(mass.sort((a, b) => {return Book.compare(a, b)}));
 console.log("4 --------------------");
 console.log(Book.isEmpty({}))
 console.log(Book.isEmpty({[Symbol()]: true}))
